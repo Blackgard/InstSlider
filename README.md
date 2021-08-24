@@ -7,7 +7,7 @@
 
 ---
 
-![Image preview](https://github.com/Blackgard/InstSlider/images/preview.png)
+![Image preview](https://github.com/Blackgard/InstSlider/blob/main/images/preview.png)
 
 </div>
 
@@ -36,7 +36,7 @@ git clone https://github.com/Blackgard/InstSlider.git
 
 ## 🎈 Usage <a name="usage"></a>
 
-You will find the files necessary for work in the <b>[dist](https://github.com/Blackgard/InstSlider/dist)</b> folder.
+You will find the files necessary for work in the <b>[dist](https://github.com/Blackgard/InstSlider/tree/main/dist)</b> folder.
 
 <b>STEP 1</b>: In header site include: 
 
