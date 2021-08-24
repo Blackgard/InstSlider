@@ -1,0 +1,81 @@
+$desktop: 1440px
+$phone: 768px
+$sm-phone: 468px
+
+body
+    background-color: white
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    height: 100vh
+    padding: 0
+    margin: 0
+
+.footer
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 20px
+    border-radius: 5px
+    color: black
+
+    a
+        color: black
+        text-decoration: none
+        border-bottom: 1px solid white
+
+        &:hover
+            color: #505050
+            border-bottom: 1px solid #505050
+
+.block-history
+    text-align: center
+    color: black
+
+.text-center
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    width: 100%
+    text-align: center
+    font-size: 30px
+
+.text-white
+    color: white
+
+.main-container
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin: 0 auto
+    background-color: white
+
+.container
+    display: flex
+    height: 100%
+    width: 100%
+    align-items: center
+    justify-content: center
+
+    opacity: 0
+
+    &-up
+        transform: translateY(5rem)
+
+    &-down 
+        transform: translateY(-5rem)
+
+    &-left
+        transform: translateY(-5rem)
+
+    &-right
+        transform: translateY(5rem)
+
+.click-here
+    width: 100%
+    margin: 0 auto
+
+    &__image
+        width: 100%
+        height: 60vh

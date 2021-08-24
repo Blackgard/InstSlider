@@ -1,0 +1,312 @@
+$desktop: 1440px
+$phone: 768px
+$sm-phone: 468px
+
+/* SLIDER */
+
+.slider
+    &-container
+        height: 100vh
+        width: 100vw
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        display: none
+        overflow: hidden
+
+        &.active
+            display: block
+            z-index: 480
+            .bg-modal
+                display: block
+
+        .slider-items
+            width: 80%
+            height: 100%
+            margin: 0 auto
+            position: relative
+
+        .bg-modal
+            display: none
+            opacity: .9
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 500
+
+            &.black 
+                background: black
+
+            
+            .icon-close
+                position: absolute
+                top: 5%
+                left: 95%
+                height: 28px
+                width: 28px
+                z-index: 1000
+                fill: white
+                cursor: pointer
+
+    &-inst
+        &.popur
+            position: fixed
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 981
+            opacity: 0
+            transition: .1s ease
+
+            &.slider-active
+                display: grid
+                opacity: 1
+                transform: translate(-50%, -50%) scale(1)
+                transition: .7s ease, opacity .1s ease
+                z-index: 9999
+
+                @media screen and (max-width: $phone)
+                    transform: translate(-50%, -50%)
+                    transition: .7s ease
+
+            &.slider-prev
+                display: grid
+                opacity: 1
+                left: 25%
+                transform: translate(-50%, -50%) scale(0.5)
+                transition: .7s ease, opacity .1s ease
+
+                @media screen and (max-width: $phone)
+                    left: -50%
+                    transform: translate(-50%, -50%)  scale(1)
+                    transition: .7s ease
+
+            &.slider-next
+                display: grid
+                opacity: 1
+                left: 75%
+                transform: translate(-50%, -50%) scale(0.5)
+                transition: .7s ease, opacity .1s ease
+
+                @media screen and (max-width: $phone)
+                    left: 150%
+                    transform: translate(-50%, -50%)  scale(1)
+                    transition: .7s ease
+
+
+            .slide-items 
+                z-index: 980
+
+            .slide-nav 
+                z-index: 1000
+                height: 100%
+
+            @media screen and (max-width: $phone)
+                width: 100%
+                height: 100%
+                opacity: 1
+
+.slide
+    height: 95%
+    width: 400px
+    margin: 20px auto
+    display: grid
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.05)
+    border-radius: 8px
+
+    &-items 
+        position: relative
+        grid-area: 1/1
+        border-radius: 8px
+        overflow: hidden
+        background-color: inherit
+
+        .item
+            position: absolute
+            top: 0px
+
+            opacity: 0
+            pointer-events: none
+            object-fit: cover
+
+            width: 100%
+            height: 100%
+            min-height: 95vh
+            min-width: 55vh
+            max-height: 95vh
+            max-width: 55vh
+            background: gray
+
+            &.active
+                position: relative
+                opacity: 1
+                pointer-events: initial
+
+            &.video
+                video
+                    width: 100%
+
+                    @media screen and (max-width: $phone)
+                        height: 100%
+                        object-fit: cover
+
+            &.image
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+
+            &.text
+                text-align: center
+                display: flex
+                align-items: center
+                justify-content: center
+
+                &.big
+                    font-size: 32px
+
+                &.white
+                    color: white
+
+            @media screen and (max-width: $phone)
+                min-height: 100vh
+                min-width: 100vw
+                max-height: 100vh
+                max-width: 100vw
+        
+        @media screen and (max-width: $phone)
+            border-radius: 0
+
+    &-nav 
+        grid-area: 1/1
+        z-index: 1
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto auto 1fr
+
+        button 
+            -webkit-appearance: none
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+            opacity: 0
+            margin-bottom: 0
+            border-bottom: 0
+            cursor: pointer
+
+    &-thumb
+        margin: 10px
+        margin-bottom: 0
+        display: flex
+        grid-column: 1 / 3
+
+        .item
+            flex: 1
+            display: block
+            height: 3px
+            background: rgba(0, 0, 0, 0.2)
+            margin: 3px
+            border-radius: 3px
+            overflow: hidden
+
+            &.viewed
+                background: rgba(255, 255, 255, 0.9)
+
+            &.active::after
+                content: attr(data-time-duration)
+                display: block
+                height: inherit
+                background: rgba(255, 255, 255, 0.9)
+                border-radius: 3px
+                transform: translateX(-100%)
+                animation: thumb 5000ms forwards linear
+
+    &-menu
+        margin: 10px
+        margin-bottom: 0
+        display: flex
+        grid-column: 1 / 3
+        align-items: center
+        color: white
+
+        .menu__name
+            font-size: 14px
+            font-weight: 600
+
+        .menu__img
+            height: 32px
+            width: 32px
+            object-fit: cover
+            margin-right: 10px
+            border-radius: 100%
+
+            text-align: center
+            line-height: 32px
+
+    &-header
+        z-index: 999
+        position: absolute
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg,rgba(38,38,38,.3) 0%,rgba(38,38,38,0) 15%)
+        border-radius: 8p
+
+
+    @media screen and (max-width: $phone)
+        width: 100%
+        border-radius: 0
+
+.history
+    &-container
+        padding: 20px
+        border-radius: 5px
+        overflow-y: hidden
+        overflow-x: auto
+
+    position: relative
+    display: flex
+    align-items: center
+    flex-direction: column
+    cursor: pointer
+    width: 80px
+
+    &-container 
+        display: flex
+        flex-direction: row
+        justify-content: center
+
+        @media screen and ( max-width: $phone )
+            justify-content: space-between
+
+    &:not(:last-child) 
+        margin-right: 30px
+
+    .history__img 
+        height: 56px
+        width: 56px
+        border-radius: 50%
+        margin-top: 4px
+        text-align: center
+        line-height: 56px
+        font-weight: 500
+
+    .history__title 
+        margin-top: 10px
+        font-size: 12px
+        text-overflow: ellipsis
+        white-space: nowrap
+        width: 100%
+        overflow: hidden
+        text-align: center
+
+    .border-img 
+        position: absolute
+        height: 64px
+        width: 64px
+
+/* ANIMATION */
+
+@keyframes thumb 
+  to 
+    transform: initial
