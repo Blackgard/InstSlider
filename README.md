@@ -6,8 +6,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 ---
-
-![Image preview](https://github.com/Blackgard/InstSlider/blob/main/images/preview.png)
+    
+<img src="https://github.com/Blackgard/InstSlider/blob/main/images/preview.png" width="50%">
 
 </div>
 
