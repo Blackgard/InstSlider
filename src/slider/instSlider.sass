@@ -7,7 +7,7 @@ $sm-phone: 468px
 .slider
     &-container
         height: 100vh
-        width: 100vw
+        width: 100%
         position: absolute
         top: 0
         left: 0
@@ -30,7 +30,7 @@ $sm-phone: 468px
         .bg-modal
             display: none
             opacity: .9
-            position: absolute
+            position: fixed
             top: 0
             left: 0
             width: 100%
@@ -278,9 +278,6 @@ $sm-phone: 468px
 
         @media screen and ( max-width: $phone )
             justify-content: space-between
-
-    &:not(:last-child) 
-        margin-right: 30px
 
     .history__img 
         height: 56px
