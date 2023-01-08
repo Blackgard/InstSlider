@@ -4,10 +4,11 @@
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
+<br>
+[Live demo](https://slider-instagram.herokuapp.com/)
 ---
 
-![Image preview](https://github.com/Blackgard/InstSlider/images/preview.png)
+<img src="https://github.com/Blackgard/InstSlider/blob/main/images/preview.png" width="50%">
 
 </div>
 
@@ -24,7 +25,7 @@
 
 InstSlider is an easy and fast Instagram style slider.
 
-[Live demo]()
+[Live demo](https://slider-instagram.herokuapp.com/)
 
 ## 🏁 Installing <a name = "getting_started"></a>
 
@@ -36,7 +37,7 @@ git clone https://github.com/Blackgard/InstSlider.git
 
 ## 🎈 Usage <a name="usage"></a>
 
-You will find the files necessary for work in the <b>[dist](https://github.com/Blackgard/InstSlider/dist)</b> folder.
+You will find the files necessary for work in the <b>[dist](/dist)</b> folder.
 
 <b>STEP 1</b>: In header site include: 
 
